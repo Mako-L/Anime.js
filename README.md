@@ -3,7 +3,7 @@
 ```
 Anime.js is a JavaScript animation library that allows you to animate elements on a website. It is lightweight and works with CSS, SVG, DOM attributes, and JavaScript Objects. It uses a declarative syntax to specify the animations, making it easy to use and understand. It also has a wide range of built-in easing functions and support for keyframe animations. It was created by Julian Garnier and it's open-source under the MIT license.
 ```
-It is often used for creating complex and subtle animations on a website. Some of the key features of anime.js include: support for various types of animations, like `SVG` or `DOM` attributes; wide range of easing functions to control the animation `speed`; `keyframe animations` for creating complex, multi-step animations; and a `small file size`, which can help with website performance.
+It is often used for creating complex and subtle animations on a website. Some of the key features of anime.js include: support for various types of animations, like `SVG` or `DOM` attributes; wide range of easing functions to control the animation `speed`; `keyframe animations` for creating complex, `multi-step animations`; and a `small file size`, which can help with website performance.
 ```
 Researching the Anime.js library is important for frontend developers because it allows them to create complex and subtle animations on a website with ease.
 ```
@@ -53,23 +53,30 @@ It's important to keep in mind that this is just one of the ways to target eleme
 ```
 
 # DOM Node / NodeList
-  DOM Node / NodeList: allows you to select DOM nodes or a NodeList, you can use the querySelector and querySelectorAll to select DOM element.
+The DOM Node / NodeList method in Anime.js allows you to target specific elements on the webpage by directly referencing their corresponding `DOM Node` or `NodeList`. This method gives you a lot of control over which elements you want to animate and is especially useful when you need to target elements that are `not easily selectable with a CSS selector`.
 
-Can be any DOM Node or NodeList.
-Type 	Default 	Example
-DOM Node 	null 	targets: el.querySelector('.item')
-NodeList 	null 	targets: el.querySelectorAll('.item')
-Code example
+To use the DOM Node/ NodeList method, you can use document.querySelector() or document.querySelectorAll() to select the DOM node(s) and assign it to a variable, and then pass this variable as the target in the animation options.
+
+For example, the following code will select all elements with the class "el" that are children of an element with the class "dom-node-demo" and apply a smooth translation animation along the X-axis for the selected elements
 ```
 var elements = document.querySelectorAll('.dom-node-demo .el');
 
 anime({
   targets: elements,
-  translateX: 270
+  translateX: 270,
+  duration: 800,
+  easing: 'easeInOutQuad', 
+  delay: function(el, i, l) { return i * 80; }
 });
 ```
+```
+In the above example, the querySelectorAll() method will return a NodeList containing all of the elements that match the given CSS selector. This NodeList is then passed to the "targets" property in the animation options object and will animate all the matching elements.
 
-    JavaScript Object
+You can also use querySelector() which will select the first matching element and assign it to a variable which can be used as the target for animation.
+
+It's also worth noting that you can use this method in combination with other DOM manipulation libraries, such as jQuery, to select elements for animation.
+```
+# JavaScript Object
 
     JavaScript Object: you can animate properties of a JavaScript Object. The object needs to have at least one property with numerical value.
 
