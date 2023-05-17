@@ -1,6 +1,7 @@
 # Anime.js
 ##### Anime.js Research...
 ```
+
 Anime.js is a JavaScript animation library that allows you to animate elements on a website. It is lightweight and works with CSS, SVG, DOM attributes, and JavaScript Objects. It uses a declarative syntax to specify the animations, making it easy to use and understand. It also has a wide range of built-in easing functions and support for keyframe animations. It was created by Julian Garnier and it's open-source under the MIT license.
 ```
 It is often used for creating complex and subtle animations on a website. Some of the key features of anime.js include: support for various types of animations, like `SVG` or `DOM` attributes; wide range of easing functions to control the animation `speed`; `keyframe animations` for creating complex, `multi-step animations`; and a `small file size`, which can help with website performance.
