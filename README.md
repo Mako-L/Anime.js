@@ -397,7 +397,7 @@ The documentation tree is like this:
     Custom easing function
     
     
-    Helpers Aπ
+    Helpers AA π
     remove
     get
     set
